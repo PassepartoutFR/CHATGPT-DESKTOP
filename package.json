@@ -1,0 +1,22 @@
+{
+  "name": "GTP-DESKTOP",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^11.0.0",
+    "electron-builder": "^22.11.7"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "GTP-DESKTOP",
+    "win": {
+      "target": "nsis",
+      "icon": "path/to/icon.ico"
+    }
+  },
+  "author": "Clément Lefebvre"
+}
