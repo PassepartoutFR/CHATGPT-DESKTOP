@@ -1,22 +1,36 @@
 {
-  "name": "GTP-DESKTOP",
-  "version": "1.0.0",
+  "name": "GPT-DESKTOP",
+  "version": "1.1.0",
+  "description": "GPT-DESKTOP application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder"
+    "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^11.0.0",
-    "electron-builder": "^22.11.7"
+    "electron": "^24.0.0",
+    "electron-builder": "^24.13.3"
   },
   "build": {
-    "appId": "com.example.myapp",
-    "productName": "GTP-DESKTOP",
+    "appId": "com.example.gptdesktop",
+    "productName": "GPT-DESKTOP",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "preload.js"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
     "win": {
-      "target": "nsis",
-      "icon": "path/to/icon.ico"
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
     }
   },
-  "author": "Clément Lefebvre"
+  "author": "Clément LEFEBVRE"
 }
